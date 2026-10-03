@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SOS ARTISAN SERRURIER – Serrurier Paris 12e, 24h/24</title>
-<meta name="description" content="Serrurier à Paris 12e, 24h/24. Même tarif de nuit et de week-end. Devis gratuit par téléphone. Ouverture de porte, cylindres, serrures blindées.">
+<title>SOS ARTISAN SERRURIER – Serrurier Paris Est, 24h/24</title>
+<meta name="description" content="Serrurier à Paris Est et Paris centre, 24h/24, sur place en 30 minutes maximum. Même tarif de nuit et de week-end. Devis gratuit par téléphone. Ouverture de porte, cylindres, serrures blindées.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --nuit:#0f1f3d;
@@ -21,7 +21,7 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   font-weight:500;
   color:var(--texte);
   background:var(--fond);
@@ -48,7 +48,8 @@ h1{
   letter-spacing:-.01em;
 }
 .promesse{margin:0 0 32px;font-size:clamp(1.05rem,2.4vw,1.25rem);color:#dfe5f2;max-width:34em}
-.agrement{margin:-14px 0 32px;font-weight:800;color:var(--or);font-size:1.05rem}
+.zone{margin:-14px 0 14px;font-size:clamp(1.05rem,2.4vw,1.25rem);color:#dfe5f2}
+.agrement{margin:0 0 32px;font-weight:800;color:var(--or);font-size:1.05rem}
 .tel{
   display:inline-block;
   background:var(--or);
@@ -91,6 +92,9 @@ li .prix{flex:0 0 auto;font-weight:800;color:var(--nuit);text-align:right}
 li .prix.devis{font-weight:600;color:var(--discret)}
 li small{display:block;color:var(--discret);font-size:.85rem;font-weight:500;margin-top:2px}
 
+.presentation{padding-top:8px}
+.presentation p{margin:12px 0 0;font-size:1.1rem;max-width:34em}
+.presentation .appel{display:inline-block;margin-top:20px;font-weight:800;font-size:1.2rem;color:var(--nuit);text-decoration:underline;text-decoration-color:var(--or);text-decoration-thickness:4px;text-underline-offset:5px}
 @media (max-width:520px){
   li{flex-wrap:wrap}
   li .points{display:none}
@@ -124,8 +128,9 @@ footer a{font-weight:800;color:#fff}
 <header class="hero">
   <div class="wrap">
     <p class="nom">SOS ARTISAN SERRURIER</p>
-    <h1>Serrurier à Paris 12e, 24h/24</h1>
+    <h1>Serrurier à Paris Est, 24h/24</h1>
     <p class="promesse">Le même tarif de jour, de nuit et le week-end. Devis gratuit par téléphone avant toute intervention.</p>
+    <p class="zone">Déplacement sur Paris Est et Paris centre en 30 minutes maximum.</p>
     <p class="agrement">Serrurier certifié, agréé assurance.</p>
     <a class="tel" href="tel:+33745451556">07 45 45 15 56</a>
     <span class="tel-aide">Appel gratuit pour le devis</span>
@@ -165,13 +170,15 @@ footer a{font-weight:800;color:#fff}
     <section aria-labelledby="t-serrure">
       <h2 id="t-serrure">Remplacement de serrure blindée</h2>
       <ul>
-        <li>
-          <span class="acte">Serrure carénée A2P*, 5 points
-            <small>Garantie 10 ans</small>
-          </span><span class="points"></span><span class="prix devis">sur devis</span>
-        </li>
-        <li><span class="acte">Serrure A2P***</span><span class="points"></span><span class="prix devis">sur devis</span></li>
+        <li><span class="acte">Serrure multipoints ou carénée (A2P*, A2P**, A2P***)</span><span class="points"></span><span class="prix devis">sur devis</span></li>
       </ul>
+    </section>
+
+    <section class="presentation" aria-labelledby="t-victor">
+      <h2 id="t-victor">Victor, serrurier certifié</h2>
+      <p>Je m'appelle Victor, je suis serrurier certifié et agréé assurance, et je suis heureux de vous aider, de jour comme de nuit.</p>
+      <p>Appelez-moi : je vous donne un devis gratuit au téléphone, avant toute intervention.</p>
+      <a class="appel" href="tel:+33745451556">07 45 45 15 56</a>
     </section>
 
   </div>
@@ -179,7 +186,7 @@ footer a{font-weight:800;color:#fff}
 
 <footer>
   <div class="wrap">
-    <p>SOS ARTISAN SERRURIER – Serrurier certifié, agréé assurance, à Paris 12e, 24h/24, sans majoration nuit ni week-end.<br>
+    <p>SOS ARTISAN SERRURIER – Serrurier certifié, agréé assurance, à Paris Est et Paris centre, 24h/24, sans majoration nuit ni week-end.<br>
     Devis gratuit : <a href="tel:+33745451556">07 45 45 15 56</a></p>
   </div>
 </footer>
