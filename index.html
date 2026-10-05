@@ -37,7 +37,7 @@ a:focus-visible{outline:3px solid var(--or);outline-offset:3px}
 .haut-tel:hover{background:#f2b43e}
 .haut-tel svg{width:22px;height:22px;flex:none;fill:currentColor}
 .topbar img{display:block;height:clamp(68px,13vw,104px);width:auto}
-.contact{background:var(--nuit);color:#fff;padding:52px 24px 48px;border-top:6px solid var(--or)}
+.contact{margin-bottom:0;background:var(--nuit);color:#fff;padding:52px 24px 48px;border-top:6px solid var(--or)}
 .contact h2{color:#fff;font-size:clamp(1.6rem,5.5vw,2.3rem);line-height:1.15;margin:0 0 10px}
 .contact p{margin:0 0 26px;color:#dfe5f2;font-size:1.1rem}
 .contact .tel-aide{margin-top:18px}
@@ -136,6 +136,33 @@ footer a{font-weight:800;color:#fff}
 .barre .b-wa{background:#25d366;color:#06240f}
 @media (max-width:700px){.barre{display:grid;grid-template-columns:1fr 1fr}}
 @media (min-width:701px){body{padding-bottom:0}}
+
+@media (max-width:700px){body{padding-bottom:0}footer{padding-bottom:104px}}
+.avis p{margin:12px 0 18px;font-size:1.1rem;max-width:34em}
+.btn-avis{display:inline-block;padding:14px 24px;border:3px solid var(--nuit);border-radius:8px;font-weight:800;font-size:1.05rem;color:var(--nuit);text-decoration:none;background:#fff}
+.btn-avis:hover{background:var(--nuit);color:#fff}
+.avis-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:16px 0 22px}
+.carte{margin:0;background:#fff;border:1px solid var(--trait);border-top:5px solid var(--or);border-radius:6px;padding:18px 18px 16px}
+.carte .etoiles{color:var(--or);letter-spacing:.12em;font-size:1.25rem;line-height:1}
+.carte blockquote{margin:10px 0 14px;font-size:1rem}
+.carte figcaption{font-weight:800;font-size:.95rem}
+.carte figcaption span{font-weight:500;color:var(--discret)}
+.carte .haut{display:flex;justify-content:space-between;align-items:center}
+.g-logo{width:22px;height:22px;flex:none}
+.btn-avis{display:inline-flex;align-items:center;gap:10px}
+.seo p{margin:0 0 14px;max-width:38em}
+.seo h3{font-size:1.15rem;margin:24px 0 8px;color:var(--nuit)}
+.etapes{list-style:decimal;border-top:0;padding-left:1.4em;margin:0 0 16px}
+.etapes li{display:list-item;border:0;padding:7px 0}
+.faq details{background:#fff;border:1px solid var(--trait);border-radius:6px;margin-bottom:10px}
+.faq summary{cursor:pointer;list-style:none;padding:15px 48px 15px 16px;font-weight:800;color:var(--nuit);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:1.5rem;color:var(--or)}
+.faq details[open] summary::after{content:"\2013"}
+.faq details p{margin:0;padding:0 16px 16px}
+.arr{display:grid;grid-template-columns:1fr 1fr;column-gap:28px;margin-bottom:18px}
+.arr li{display:block;padding:9px 0}
+@media (max-width:520px){.arr{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -167,7 +194,7 @@ footer a{font-weight:800;color:#fff}
     <section aria-labelledby="t-ouverture">
       <h2 id="t-ouverture">Ouverture et dépannage</h2>
       <ul>
-        <li><span class="acte">Porte claquée</span><span class="points"></span><span class="prix">100 €</span></li>
+        <li><span class="acte">Porte claquée</span><span class="points"></span><span class="prix">80 €</span></li>
         <li><span class="acte">Porte fermée à demi-tour</span><span class="points"></span><span class="prix">180 €</span></li>
         <li><span class="acte">Porte blindée sécurisée</span><span class="points"></span><span class="prix">250 €</span></li>
       </ul>
@@ -194,17 +221,88 @@ footer a{font-weight:800;color:#fff}
     </section>
 
     <section class="presentation" aria-labelledby="t-victor">
-      <h2 id="t-victor">Victor, serrurier certifié</h2>
-      <p>Je m'appelle Victor, je suis serrurier certifié et agréé assurance, et je suis heureux de vous aider, de jour comme de nuit.</p>
-      <p>Appelez-moi : je vous donne un devis gratuit au téléphone, avant toute intervention.</p>
+      <h2 id="t-victor">Qui sommes-nous&nbsp;?</h2>
+      <p>Chez SOS Artisan Serrurier, nous sommes serruriers certifiés et agréés assurance, et heureux de vous aider, de jour comme de nuit.</p>
+      <p>Appelez-nous&nbsp;: nous vous donnons un devis gratuit au téléphone, avant toute intervention.</p>
+    </section>
+
+    <section class="avis" aria-labelledby="t-avis">
+      <h2 id="t-avis">Avis clients</h2>
+      <div class="avis-grid">
+        <figure class="carte">
+          <div class="haut"><div class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</div><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
+          <blockquote>Top ! Serrurier arrivé hyper vite, nouvelle serrure posée rapidement, et tout est resté propre après son passage. Sympa, efficace, vraiment pro. Je recommande!</blockquote>
+          <figcaption>Alcibiade C. <span>· Avis Google</span></figcaption>
+        </figure>
+        <figure class="carte">
+          <div class="haut"><div class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</div><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
+          <blockquote>Victor est un super serrurier ! il est intervenu rapidement pour une porte claquée. ouverture propre et rapide. le tout a bon prix ! merci encore</blockquote>
+          <figcaption>Yohan C. <span>· Avis Google</span></figcaption>
+        </figure>
+      </div>
+      <a class="btn-avis" href="https://share.google/QoOk6Uhp09Z2fQhoW" target="_blank" rel="noopener"><svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>Voir tous les avis Google</a>
+    </section>
+
+    <section class="seo" aria-labelledby="t-seo1">
+      <h2 id="t-seo1">Dépannage serrurier d'urgence à Paris&nbsp;: comment ça marche&nbsp;?</h2>
+      <p>Porte claquée, clé perdue, serrure forcée après une tentative d'effraction&nbsp;: quand on se retrouve bloqué dehors ou qu'on ne peut plus sécuriser son logement, chaque minute compte. Voici comment se déroule un dépannage serrurier d'urgence à Paris, de votre appel jusqu'à la remise des clés.</p>
+      <ol class="etapes">
+        <li><strong>Vous appelez, nous répondons 24h/24.</strong> Décrivez-nous la situation (porte claquée, porte fermée à clé, porte blindée, serrure cassée) et votre adresse. Le devis est gratuit par téléphone.</li>
+        <li><strong>Nous vous annonçons le prix avant de partir.</strong> Nos tarifs sont affichés sur cette page, sans majoration la nuit ni le week-end. Vous savez ce que vous allez payer avant même notre arrivée.</li>
+        <li><strong>Nous arrivons en 30 minutes maximum.</strong> Nous nous déplaçons dans tout Paris, de jour comme de nuit.</li>
+        <li><strong>Diagnostic et devis écrit avant les travaux.</strong> Sur place, nous vérifions votre serrure et nous vous remettons un devis écrit. Rien n'est commencé sans votre accord.</li>
+        <li><strong>Ouverture sans casse en priorité.</strong> Pour une ouverture de porte claquée ou fermée à demi-tour, nous ouvrons sans abîmer la serrure chaque fois que c'est possible, ce qui vous évite un remplacement inutile.</li>
+        <li><strong>Changement de serrure si nécessaire.</strong> Si la serrure est forcée, usée ou si vous avez perdu vos clés, nous procédons au changement de serrure ou de cylindre, y compris sur une porte blindée, avec un modèle adapté à votre niveau de sécurité.</li>
+      </ol>
+      <p>Que votre porte soit en bois, en acier ou blindée, la méthode reste la même&nbsp;: nous vous expliquons chaque étape avant d'agir, pour que vous gardiez la maîtrise de l'intervention et du budget. Serruriers certifiés et agréés assurances, nous vous remettons une facture détaillée à joindre à votre déclaration de sinistre. Pour une porte claquée, une porte blindée ou un changement de serrure, appelez-nous&nbsp;: le devis est gratuit.</p>
+    </section>
+
+    <section class="seo faq" aria-labelledby="t-faq">
+      <h2 id="t-faq">Questions fréquentes</h2>
+      <details><summary>Quel est le tarif pour une ouverture de porte claquée à Paris&nbsp;?</summary><p>L'ouverture d'une porte claquée est à 80&nbsp;€. Une porte fermée à demi-tour est à 180&nbsp;€, et une porte blindée sécurisée à 250&nbsp;€. Le déplacement avec diagnostic est affiché 49&nbsp;€. Le prix total vous est annoncé au téléphone avant notre départ, sans majoration la nuit ni le week-end, et le devis est gratuit.</p></details>
+      <details><summary>Comment se passe la prise en charge par l'assurance habitation&nbsp;?</summary><p>Nous sommes serruriers agréés assurances&nbsp;: nous vous remettons une facture détaillée qui précise l'intervention, à joindre à votre déclaration. La prise en charge dépend de votre contrat (vol, effraction, dégât, assistance dépannage). En cas d'effraction, ne touchez à rien avant d'avoir pris des photos, et contactez votre assureur dans les délais prévus par votre contrat.</p></details>
+      <details><summary>Pouvez-vous ouvrir une porte blindée sans casser le cylindre&nbsp;?</summary><p>Dans la plupart des cas, oui&nbsp;: l'ouverture sans casse est notre priorité, y compris sur une porte blindée sécurisée (250&nbsp;€). Si le cylindre doit être remplacé, par exemple après une perte de clés ou une tentative d'effraction, ou si la serrure ne peut pas s'ouvrir sans dommage, nous vous le disons avant d'intervenir. Un cylindre sécurisé A2P est facturé sur devis, selon la marque.</p></details>
+      <details><summary>Quels sont vos délais d'intervention dans les 20 arrondissements de Paris&nbsp;?</summary><p>Nous intervenons en 30 minutes maximum dans tout Paris, du 1er au 20e arrondissement, 24h/24, nuit et week-end compris. En petite couronne, nous vous confirmons le délai par téléphone selon votre adresse.</p></details>
+    </section>
+
+    <section class="seo" aria-labelledby="t-zones">
+      <h2 id="t-zones">Serrurier dans les 20 arrondissements de Paris</h2>
+      <p>SOS Artisan Serrurier intervient dans tout Paris, du 1er au 20e arrondissement, de jour comme de nuit. Que vous soyez à Bastille, à Montparnasse, à Montmartre ou dans le 15e, nous arrivons en 30 minutes maximum. Voici les arrondissements et quartiers desservis&nbsp;:</p>
+      <ul class="arr">
+        <li><strong>1er</strong> – Châtelet, Louvre, Palais-Royal</li>
+        <li><strong>2e</strong> – Sentier, Bourse, Opéra</li>
+        <li><strong>3e</strong> – Haut-Marais, Temple</li>
+        <li><strong>4e</strong> – Marais, Île de la Cité</li>
+        <li><strong>5e</strong> – Quartier latin, Mouffetard</li>
+        <li><strong>6e</strong> – Saint-Germain-des-Prés, Luxembourg</li>
+        <li><strong>7e</strong> – Invalides, Saint-Dominique</li>
+        <li><strong>8e</strong> – Champs-Élysées, Madeleine</li>
+        <li><strong>9e</strong> – Opéra, Saint-Georges</li>
+        <li><strong>10e</strong> – Gare du Nord, canal Saint-Martin</li>
+        <li><strong>11e</strong> – Bastille, Oberkampf, Voltaire</li>
+        <li><strong>12e</strong> – Nation, Bercy, Gare de Lyon</li>
+        <li><strong>13e</strong> – Place d'Italie, Butte-aux-Cailles</li>
+        <li><strong>14e</strong> – Montparnasse, Denfert-Rochereau</li>
+        <li><strong>15e</strong> – Vaugirard, Convention, Beaugrenelle</li>
+        <li><strong>16e</strong> – Passy, Trocadéro, Auteuil</li>
+        <li><strong>17e</strong> – Batignolles, Ternes, Wagram</li>
+        <li><strong>18e</strong> – Montmartre, Barbès, Marcadet</li>
+        <li><strong>19e</strong> – Buttes-Chaumont, La Villette</li>
+        <li><strong>20e</strong> – Belleville, Gambetta, Père-Lachaise</li>
+      </ul>
+      <p>En petite couronne, nous intervenons notamment à Boulogne-Billancourt, Neuilly-sur-Seine, Levallois-Perret, Issy-les-Moulineaux, Saint-Denis, Montreuil, Vincennes et Ivry-sur-Seine. Appelez-nous pour confirmer le délai selon votre adresse.</p>
+      <h3>Marques de serrures prises en charge</h3>
+      <p>Nous travaillons sur les principales marques de serrures et de cylindres&nbsp;: Fichet, Bricard, Vachette, Picard, Mottura et Pollux. Serrure multipoints, serrure carénée ou cylindre haute sécurité A2P&nbsp;: nous vous proposons la solution adaptée à votre porte et nous chiffrons le remplacement avant d'intervenir.</p>
     </section>
 
   </div>
 </main>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quel est le tarif pour une ouverture de porte claquée à Paris ?", "acceptedAnswer": {"@type": "Answer", "text": "L'ouverture d'une porte claquée est à 80 €. Une porte fermée à demi-tour est à 180 €, et une porte blindée sécurisée à 250 €. Le déplacement avec diagnostic est affiché 49 €. Le prix total vous est annoncé au téléphone avant notre départ, sans majoration la nuit ni le week-end, et le devis est gratuit."}}, {"@type": "Question", "name": "Comment se passe la prise en charge par l'assurance habitation ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous sommes serruriers agréés assurances : nous vous remettons une facture détaillée qui précise l'intervention, à joindre à votre déclaration. La prise en charge dépend de votre contrat (vol, effraction, dégât, assistance dépannage). En cas d'effraction, ne touchez à rien avant d'avoir pris des photos, et contactez votre assureur dans les délais prévus par votre contrat."}}, {"@type": "Question", "name": "Pouvez-vous ouvrir une porte blindée sans casser le cylindre ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans la plupart des cas, oui : l'ouverture sans casse est notre priorité, y compris sur une porte blindée sécurisée (250 €). Si le cylindre doit être remplacé, par exemple après une perte de clés ou une tentative d'effraction, ou si la serrure ne peut pas s'ouvrir sans dommage, nous vous le disons avant d'intervenir. Un cylindre sécurisé A2P est facturé sur devis, selon la marque."}}, {"@type": "Question", "name": "Quels sont vos délais d'intervention dans les 20 arrondissements de Paris ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous intervenons en 30 minutes maximum dans tout Paris, du 1er au 20e arrondissement, 24h/24, nuit et week-end compris. En petite couronne, nous vous confirmons le délai par téléphone selon votre adresse."}}]}</script>
+
 
 <section class="contact" aria-labelledby="t-contact">
   <div class="wrap">
-    <h2 id="t-contact">Un problème de serrure ? Appelez-moi.</h2>
+    <h2 id="t-contact">Un problème de serrure ?&nbsp;Appelez-nous.</h2>
     <p>Devis gratuit au téléphone, avant toute intervention.</p>
     <div class="actions">
       <a class="btn btn-tel" href="tel:+33745451556"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><span><small>Appeler maintenant</small>07 45 45 15 56</span></a>
